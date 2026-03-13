@@ -1,0 +1,269 @@
+v4(니가 짚어준 피쳐조합):
+Tuning Model for Total Alkalinity
+
+Best R2: 0.17014553724578918
+Best Params: {'n_estimators': 513, 'learning_rate': 0.038340213923528474, 'num_leaves': 18, 'max_depth': 7, 'min_child_samples': 7, 'subsample': 0.9790918125255897, 'colsample_bytree': 0.8098432103414734, 'reg_alpha': 4.3315011042828875, 'reg_lambda': 6.9397941667664265}
+Tuning Model for Electrical Conductance
+
+Best R2: 0.21011816642252068
+Best Params: {'n_estimators': 721, 'learning_rate': 0.03628216966804039, 'num_leaves': 24, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.7610038394702054, 'colsample_bytree': 0.8271837580162292, 'reg_alpha': 0.006245027789323207, 'reg_lambda': 0.003463973578238047}
+Tuning Model for Dissolved Reactive Phosphorus
+
+Best R2: -0.012299125303640857
+Best Params: {'n_estimators': 1399, 'learning_rate': 0.06980496390669522, 'num_leaves': 75, 'max_depth': 4, 'min_child_samples': 22, 'subsample': 0.9786663527503835, 'colsample_bytree': 0.8045444001818154, 'reg_alpha': 0.055922337824913626, 'reg_lambda': 0.050541578468165316}
+
+almost all: nir_red_ratio,green_blue_ratio,swir1_swir2_ratio,nir_red_diff,green_swir1_diff,ppt_pet_ratio,aet_pet_ratio,water_surplus,temp_range,lat2,lon2:
+
+Tuning Model for Total Alkalinity
+
+Best R2: 0.1547243291359009
+Best Params: {'n_estimators': 1946, 'learning_rate': 0.005521612358639424, 'num_leaves': 17, 'max_depth': 10, 'min_child_samples': 16, 'subsample': 0.7702619921219687, 'colsample_bytree': 0.8701154202716075, 'reg_alpha': 0.058537097176765945, 'reg_lambda': 0.05972793980649018}
+Tuning Model for Electrical Conductance
+
+Best R2: 0.2161941875094521
+Best Params: {'n_estimators': 1067, 'learning_rate': 0.0260581433734502, 'num_leaves': 62, 'max_depth': 4, 'min_child_samples': 10, 'subsample': 0.867452348333009, 'colsample_bytree': 0.7521190157874619, 'reg_alpha': 0.001260320296684995, 'reg_lambda': 0.3573429390893749}
+Tuning Model for Dissolved Reactive Phosphorus
+
+Best R2: -0.022572057742145612
+Best Params: {'n_estimators': 1777, 'learning_rate': 0.013403379728786004, 'num_leaves': 82, 'max_depth': 5, 'min_child_samples': 27, 'subsample': 0.9344899503068278, 'colsample_bytree': 0.7663631845754235, 'reg_alpha': 0.00921913789316996, 'reg_lambda': 3.225982974696243}
+
+NDVI+NDBI:
+Best R2: 0.15442741190313564
+Best Params: {'n_estimators': 1034, 'learning_rate': 0.030053393863223744, 'num_leaves': 19, 'max_depth': 10, 'min_child_samples': 13, 'subsample': 0.9263658374806574, 'colsample_bytree': 0.8384141640202835, 'reg_alpha': 0.002841080888099662, 'reg_lambda': 8.355546055297172}
+Tuning Model for Electrical Conductance
+
+Best R2: 0.20852412426844183
+Best Params: {'n_estimators': 1768, 'learning_rate': 0.09122385091640114, 'num_leaves': 116, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.7898716893649984, 'colsample_bytree': 0.7651954582385471, 'reg_alpha': 0.0004435726661515238, 'reg_lambda': 0.11335944050980672}
+Tuning Model for Dissolved Reactive Phosphorus
+
+Best R2: -0.0157875259511318
+Best Params: {'n_estimators': 1021, 'learning_rate': 0.025076502634918143, 'num_leaves': 93, 'max_depth': 4, 'min_child_samples': 30, 'subsample': 0.8772735331881959, 'colsample_bytree': 0.915410909008945, 'reg_alpha': 0.00098812063800728, 'reg_lambda': 0.00016703546502024714}
+
+NDVI+NDBI+ppt_pet_ratio+water_surplus+temp_range:
+Best R2: 0.14557729631167282
+Best Params: {'n_estimators': 929, 'learning_rate': 0.00974929029820439, 'num_leaves': 20, 'max_depth': 9, 'min_child_samples': 28, 'subsample': 0.9430881944117672, 'colsample_bytree': 0.8050127837640337, 'reg_alpha': 4.556636570116816, 'reg_lambda': 6.558614970939391}
+Tuning Model for Electrical Conductance
+
+Best R2: 0.2116629975152046
+Best Params: {'n_estimators': 1155, 'learning_rate': 0.09932382930972641, 'num_leaves': 95, 'max_depth': 4, 'min_child_samples': 30, 'subsample': 0.9350362344743669, 'colsample_bytree': 0.8095672434275162, 'reg_alpha': 0.00443780853625261, 'reg_lambda': 0.014712236065968182}
+Tuning Model for Dissolved Reactive Phosphorus
+
+Best R2: -0.017832406572141225
+Best Params: {'n_estimators': 1339, 'learning_rate': 0.018089749972400804, 'num_leaves': 38, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.8047270958937024, 'colsample_bytree': 0.8945663577907159, 'reg_alpha': 0.24843171492479152, 'reg_lambda': 9.691643740553566}
+
+ppt_pet_ratio+water_surplus+temp_range:
+Best R2: 0.14300587116280344
+Best Params: {'n_estimators': 1507, 'learning_rate': 0.04607623339119014, 'num_leaves': 17, 'max_depth': 6, 'min_child_samples': 5, 'subsample': 0.9838613677055782, 'colsample_bytree': 0.7628849591350384, 'reg_alpha': 0.0005844323495104092, 'reg_lambda': 3.9580287228084994}
+
+Best R2: 0.20257762274065244
+Best Params: {'n_estimators': 1886, 'learning_rate': 0.0720227711836483, 'num_leaves': 37, 'max_depth': 4, 'min_child_samples': 20, 'subsample': 0.9309799284578926, 'colsample_bytree': 0.9313828986612973, 'reg_alpha': 0.3219728756155518, 'reg_lambda': 0.009567111161059265}
+
+Best R2: -0.015514562988671021
+Best Params: {'n_estimators': 1536, 'learning_rate': 0.08661750116353904, 'num_leaves': 120, 'max_depth': 4, 'min_child_samples': 11, 'subsample': 0.8244913289875635, 'colsample_bytree': 0.823085802641765, 'reg_alpha': 0.008338610072667353, 'reg_lambda': 0.0014378058888988496}
+
+NDVI+NDBI:
+Best R2: 0.1399844324282762
+Best Params: {'n_estimators': 724, 'learning_rate': 0.023030904755415787, 'num_leaves': 16, 'max_depth': 6, 'min_child_samples': 24, 'subsample': 0.7581973965542679, 'colsample_bytree': 0.8496287242361175, 'reg_alpha': 1.7730153448550352, 'reg_lambda': 0.001699887274602581}
+
+Best R2: 0.2021424420898117
+Best Params: {'n_estimators': 1382, 'learning_rate': 0.0815805047981942, 'num_leaves': 94, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.9366723896541336, 'colsample_bytree': 0.9371117056342303, 'reg_alpha': 0.00010604319124118555, 'reg_lambda': 0.0009788421376057265}
+
+Best R2: -0.01832438095649027
+Best Params: {'n_estimators': 1658, 'learning_rate': 0.023586200380530095, 'num_leaves': 77, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.8176390087743853, 'colsample_bytree': 0.8971227335837786, 'reg_alpha': 1.8600266640955767, 'reg_lambda': 0.4793380757467684}
+
+NDVI:
+Best R2: 0.13899779692301292
+Best Params: {'n_estimators': 791, 'learning_rate': 0.07148698572034012, 'num_leaves': 18, 'max_depth': 9, 'min_child_samples': 24, 'subsample': 0.8178106508869163, 'colsample_bytree': 0.8353698545014209, 'reg_alpha': 0.0005574204180308858, 'reg_lambda': 0.2836817482463516}
+
+Best R2: 0.19349980099480102
+Best Params: {'n_estimators': 589, 'learning_rate': 0.02445526719786316, 'num_leaves': 107, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.7973433083654138, 'colsample_bytree': 0.9667671843693643, 'reg_alpha': 0.3592223168273689, 'reg_lambda': 0.022825021193666948}
+
+Best R2: -0.013195249073008486
+Best Params: {'n_estimators': 946, 'learning_rate': 0.06051567796547057, 'num_leaves': 112, 'max_depth': 4, 'min_child_samples': 23, 'subsample': 0.9173240838231176, 'colsample_bytree': 0.9473961113563665, 'reg_alpha': 9.930107871895142, 'reg_lambda': 0.3737803212947231}
+
+before NDVI:
+
+Best R2: 0.14606469217672408
+Best Params: {'n_estimators': 1671, 'learning_rate': 0.0761805067344488, 'num_leaves': 17, 'max_depth': 9, 'min_child_samples': 5, 'subsample': 0.9985618035139701, 'colsample_bytree': 0.9542673337143127, 'reg_alpha': 0.0015954946038067277, 'reg_lambda': 0.00015487503262732156}
+
+Best R2: 0.20086420545394557
+Best Params: {'n_estimators': 1518, 'learning_rate': 0.07682231153327448, 'num_leaves': 54, 'max_depth': 4, 'min_child_samples': 11, 'subsample': 0.8597814323959884, 'colsample_bytree': 0.9277973344033662, 'reg_alpha': 0.0070647830059528665, 'reg_lambda': 5.852191952499727}
+
+Best R2: -0.012823169513645372
+Best Params: {'n_estimators': 717, 'learning_rate': 0.03676321466014261, 'num_leaves': 23, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.8924526397708301, 'colsample_bytree': 0.9990809897438964, 'reg_alpha': 0.00507589130325842, 'reg_lambda': 0.14610478865753082}
+
+v3: log1p to Electrical and Dissolved 
+
+
+Best R2: 0.15816594954232296
+Best Params: {'n_estimators': 1029, 'learning_rate': 0.021996929927734946, 'num_leaves': 21, 'max_depth': 9, 'min_child_samples': 26, 'subsample': 0.9601813976135134, 'colsample_bytree': 0.8055374625653557, 'reg_alpha': 0.000447435339864153, 'reg_lambda': 5.495441597486022}
+
+
+
+Best R2: 0.19985357889833236
+Best Params: {'n_estimators': 1294, 'learning_rate': 0.05778302389666278, 'num_leaves': 35, 'max_depth': 4, 'min_child_samples': 23, 'subsample': 0.8484271502342918, 'colsample_bytree': 0.907927158793951, 'reg_alpha': 1.8791047964710768, 'reg_lambda': 7.952925491987129}
+
+Best R2: -0.0069738660084788465
+Best Params: {'n_estimators': 727, 'learning_rate': 0.032042630260960006, 'num_leaves': 57, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.9049990974388481, 'colsample_bytree': 0.78423676321846, 'reg_alpha': 0.6718644955262052, 'reg_lambda': 0.11164868684313074}
+
+
+v2: impute by median
+
+
+Best R2: 0.13976266523069744
+Best Params: {'n_estimators': 1204, 'learning_rate': 0.00544700569497108, 'num_leaves': 19, 'max_depth': 9, 'min_child_samples': 7, 'subsample': 0.7875882214328538, 'colsample_bytree': 0.7785305879218031, 'reg_alpha': 0.0003125581239162891, 'reg_lambda': 0.02090270247319038}
+
+
+
+Best R2: 0.19507332682646733
+Best Params: {'n_estimators': 1006, 'learning_rate': 0.007963294567027253, 'num_leaves': 23, 'max_depth': 4, 'min_child_samples': 22, 'subsample': 0.7752858680568575, 'colsample_bytree': 0.8564015725823487, 'reg_alpha': 0.13824306484054716, 'reg_lambda': 7.520061348368547}
+
+Best R2: -0.009143606156469452
+Best Params: {'n_estimators': 775, 'learning_rate': 0.047327741239738, 'num_leaves': 20, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.8221094887365146, 'colsample_bytree': 0.9689994078350506, 'reg_alpha': 0.0043895741743259645, 'reg_lambda': 1.8061365489081174}
+
+
+v2: sample date sin cos
+
+
+Best R2: 0.1288634444473896
+Best Params: {'n_estimators': 858, 'learning_rate': 0.06764052667301111, 'num_leaves': 83, 'max_depth': 5, 'min_child_samples': 30, 'subsample': 0.931487389187119, 'colsample_bytree': 0.8316953085146639, 'reg_alpha': 0.0006701298064178908, 'reg_lambda': 0.3097846188598433}
+
+
+
+Best R2: 0.22486893784779366
+Best Params: {'n_estimators': 1449, 'learning_rate': 0.07593161150676718, 'num_leaves': 28, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.7931340459631059, 'colsample_bytree': 0.9329729802498183, 'reg_alpha': 3.730632697202038, 'reg_lambda': 0.00016772172713946964}
+
+Best R2: -0.010222533265938517
+Best Params: {'n_estimators': 1253, 'learning_rate': 0.045438330252442434, 'num_leaves': 111, 'max_depth': 4, 'min_child_samples': 28, 'subsample': 0.794354071755979, 'colsample_bytree': 0.9252928042922158, 'reg_alpha': 2.7100287164721037, 'reg_lambda': 0.12524239373079213}
+
+## v2: impute by cluster
+
+
+Best R2: 0.1394075044371857
+Best Params: {'n_estimators': 909, 'learning_rate': 0.03677835202204472, 'num_leaves': 27, 'max_depth': 10, 'min_child_samples': 10, 'subsample': 0.7976807267530358, 'colsample_bytree': 0.7619497444668942, 'reg_alpha': 0.034628535721757565, 'reg_lambda': 0.0012498604108414268}
+
+
+
+Best R2: 0.19128666947163525
+Best Params: {'n_estimators': 1791, 'learning_rate': 0.019726770241817394, 'num_leaves': 126, 'max_depth': 4, 'min_child_samples': 24, 'subsample': 0.8009389207041588, 'colsample_bytree': 0.9262144082600106, 'reg_alpha': 0.0033274129841917867, 'reg_lambda': 0.003543115627090381}
+
+Best R2: -0.025326670516418414
+Best Params: {'n_estimators': 1279, 'learning_rate': 0.011717152865441094, 'num_leaves': 101, 'max_depth': 4, 'min_child_samples': 29, 'subsample': 0.7741679210253011, 'colsample_bytree': 0.9269852599647401, 'reg_alpha': 3.5346832187458115, 'reg_lambda': 0.0002614146284398019}
+
+## v2: hyper tuning
+Tuning Model for Total Alkalinity
+
+Best R2: 0.13040795397407934
+Best Params: {'n_estimators': 554, 'learning_rate': 0.09487565212751686, 'num_leaves': 75, 'max_depth': 4, 'min_child_samples': 16, 'subsample': 0.9259015283206458, 'colsample_bytree': 0.7543459279518387, 'reg_alpha': 0.00011152142250328349, 'reg_lambda': 0.16818848661276914}
+
+Tuning Model for Electrical Conductance
+
+Best R2: 0.1970799723072299
+Best Params: {'n_estimators': 1862, 'learning_rate': 0.08065605527028032, 'num_leaves': 71, 'max_depth': 4, 'min_child_samples': 22, 'subsample': 0.8827972596012728, 'colsample_bytree': 0.7510380030358358, 'reg_alpha': 0.0011771365221190974, 'reg_lambda': 0.00010054313605929452}
+
+Tuning Model for Dissolved Reactive Phosphorus
+
+Best R2: -0.005514015684881146
+Best Params: {'n_estimators': 1710, 'learning_rate': 0.09939898493553831, 'num_leaves': 128, 'max_depth': 4, 'min_child_samples': 23, 'subsample': 0.833152787211148, 'colsample_bytree': 0.9126686132234026, 'reg_alpha': 0.05224740214086285, 'reg_lambda': 6.3794285856025486}
+
+## Baseline:
+0	Total Alkalinity	0.9031986960922542	23.13246822764864	0.5456611002407497	50.870362307074004
+1	Electrical Conductance	0.9178842365424648	98.00710092427565	0.585458331042898	219.9986751758032
+2	Dissolved Reactive Phosphorus	0.8821694901180291	17.45475712888703	0.5291453941942009	35.18177591172858
+
+## v1
+
+Training Model for Total Alkalinity
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000279 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 1019
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 4
+[LightGBM] [Info] Start training from score 108.726764
+
+Train Evaluation:
+R²: 0.710
+RMSE: 38.872
+
+Validation Evaluation:
+R²: -0.329
+RMSE: 80.585
+
+Training Model for Electrical Conductance
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000234 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 1019
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 4
+[LightGBM] [Info] Start training from score 455.906301
+
+Train Evaluation:
+R²: 0.754
+RMSE: 174.344
+
+Validation Evaluation:
+R²: -0.126
+RMSE: 290.330
+
+Training Model for Dissolved Reactive Phosphorus
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000244 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 1019
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 4
+[LightGBM] [Info] Start training from score 34.940631
+
+Train Evaluation:
+R²: 0.677
+RMSE: 24.274
+
+Validation Evaluation:
+R²: -0.307
+RMSE: 74.193
+
+
+## After adding 10 more features from terraclimate
+
+
+Training Model for Total Alkalinity
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000411 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3141
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 13
+[LightGBM] [Info] Start training from score 108.726764
+
+Train Evaluation:
+R²: 0.911
+RMSE: 21.609
+
+Validation Evaluation:
+R²: -0.326
+RMSE: 80.503
+
+Training Model for Electrical Conductance
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000347 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3141
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 13
+[LightGBM] [Info] Start training from score 455.906301
+
+Train Evaluation:
+R²: 0.926
+RMSE: 95.834
+
+Validation Evaluation:
+R²: 0.187
+RMSE: 246.756
+
+Training Model for Dissolved Reactive Phosphorus
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000365 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3141
+[LightGBM] [Info] Number of data points in the train set: 7440, number of used features: 13
+[LightGBM] [Info] Start training from score 34.940631
+
+Train Evaluation:
+R²: 0.831
+RMSE: 17.575
+
+Validation Evaluation:
+R²: -0.493
+RMSE: 79.284
+

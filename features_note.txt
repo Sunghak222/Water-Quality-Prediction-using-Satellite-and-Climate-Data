@@ -1,0 +1,152 @@
+Latitude: 위도
+- 지역 위치 정보
+- 기온, 강수, 식생 패턴이 지역마다 다르기 때문에 수질의 기본적인 지역 차이를 설명하는 변수
+
+Longitude: 경도
+- 지역 위치 정보
+- 해안/내륙 차이, 지형 차이를 통해 수질 패턴 차이를 설명하는 변수
+
+nir: 식생 밀도
+- 식물이 많을수록 값이 높아짐
+- 주변 식생이 많으면 토양 유출, 유기물 유입 등으로 수질에 영향을 줄 수 있음
+
+green: 물 색 변화
+- 물이 맑으면 값이 낮고
+- 조류(미세 식물)나 부유물질이 많으면 값이 높아질 수 있음
+- 따라서 물 속 물질 농도 변화와 관련 있음
+
+swir22: 토양 수분
+- 땅이 건조할수록 값이 높아짐
+- 토양이 건조하면 비가 왔을 때 오염물질이 더 많이 유출될 수 있음
+
+NDMI: 식생 수분 상태
+- 식물이 얼마나 수분을 가지고 있는지 나타냄
+- 식생이 건조하면 토양 유출 가능성이 증가
+
+MNDWI: 수면 여부
+- 물이 있는 지역이면 값이 높아짐
+- 주변이 실제 물인지 땅인지 구분하는 데 사용됨
+
+pet: 잠재 증발량
+- 대기가 물을 얼마나 증발시키려 하는지
+- 값이 높으면 건조한 기후
+
+ppt: 강수량
+- 비가 얼마나 왔는지
+- 비가 오면 토양, 영양염류 등이 물로 유입될 수 있음
+
+aet: 실제 증발량
+- 실제로 증발된 물의 양
+- 식생 활동과 토양 수분 상태를 반영
+
+def: 수분 부족
+- pet - aet
+- 값이 높으면 물 부족 상태
+
+pdsi: 가뭄 지수
+- 음수면 가뭄
+- 양수면 습한 상태
+
+q: 유출량
+- 비가 온 뒤 지표에서 물이 흘러가는 양
+- 유출이 많으면 오염물질 이동이 증가
+
+soil: 토양 수분
+- 토양에 포함된 물의 양
+
+tmax: 최고 기온
+- 기온이 높으면 생물 활동과 화학 반응이 증가
+
+tmin: 최저 기온
+- 기온 변화를 설명하는 변수
+
+vpd: 공기 건조도
+- 공기가 얼마나 건조한지
+- 값이 높으면 증발이 쉽게 일어남
+
+sin_month: 계절 정보 (sin)
+- 월 정보를 주기적으로 표현
+- 계절 변화 반영
+
+cos_month: 계절 정보 (cos)
+- 월 정보를 주기적으로 표현
+- 계절 변화 반영
+
+2. Remote sensing(위성) 피처
+
+NDVI:
+- NDVI = (nir - ls_red) / (nir + ls_red + eps)
+- 식물은 보통 NIR 반사가 높고 Red 반사는 상대적으로 낮은 편이야
+- 이 주변이 얼마나 식생이 많은가
+
+NDBI:
+- NDBI = (swir16 - nir) / (swir16 + nir + eps)
+- SWIR가 크고 NIR보다 강하면 식생보다는 건조하고 인공적이거나 노출된 표면 느낌이 강할 수 있어.
+- 주변이 더 건조하고 덜 식생적인 표면인가?
+
+nir_red_ratio:
+- nir_red_ratio = nir / (ls_red + eps)
+- 왜 NDVI만 있으면 안 되냐면 비율까지
+- NIR이 red보다 몇 배 정도 큰가
+
+green_blue_ratio:
+- 물/탁도/표면 반사 특성 차이를 간접적으로
+- green 쪽 반사가 blue보다 상대적으로 강한가?
+
+swir1_swir2_ratio:
+- df['swir1_swir2_ratio'] = df['swir16'] / (df['swir22'] + eps)
+- 표면 수분 상태나 토양/광물/건조도에 대한 민감도가 조금 다를 수 있어.
+
+nir_red_diff:
+- df['nir_red_diff'] = df['nir'] - df['ls_red']
+- ratio와 difference는 비슷해 보여도 다르다.
+
+green_swir1_diff:
+- df['green_swir1_diff'] = df['green'] - df['swir16']
+
+3. Climate interaction 피처
+ppt_pet_ratio:
+- df['ppt_pet_ratio'] = df['ppt'] / (df['pet'] + eps)
+- 비가 오는 정도가 증발 demand에 비해 얼마나 충분한가
+
+aet_pet_ratio:
+- df['aet_pet_ratio'] = df['aet'] / (df['pet'] + eps)
+- 증발산이 하고 싶어 하는 최대 수준 대비 실제로 얼마나 일어났는가
+- 1에 가까우면 → 물이 충분해서 실제 증발산이 잘 일어나는 상태
+- 수분 availability를 간접적
+
+water_surplus:
+- df['water_surplus'] = df['ppt'] - df['pet']
+- 이 시기/지역이 물이 남는 편인가 부족한 편인가
+
+temp_range:
+- df['temp_range'] = df['tmax'] - df['tmin']
+
+soil_vpd:
+- df['soil_vpd'] = df['soil'] * df['vpd']
+- soil: 토양 수분 
+- vpd: 대기의 건조 요구 정도라고 보면 됨
+- 땅의 수분 상태와 대기의 건조 압력이 동시에 어떻게 작용하는가
+- soil 높고 vpd 높다 → 수분은 있지만 공기는 많이 말리려는 상태
+- soil 낮고 vpd 높다 → 매우 건조 스트레스 환경일 수 있음
+
+Total alkalinity:
+산 중화 능력
+CACO3으로 잼
+먹는물 = 30-400ppm
+좋은물 = 20-200mg/L
+높은이유:natural geologic factors (e.g., weathering of carbonate rocks) and human, activities such as mining, urbanization and agricultural runoff
+낮은이유: catchment geology (e.g., sandstone rock) and vegetation type
+
+Electrical Conductance:
+물이 전류를 얼마나 잘 전달하는가?
+이온이 얼마나 들어있는가?
+높은이유: 뭐가 많이 들어있음. 오염일가능성
+<800 uS/cm가 좋은것
+Key drivers include the region’s climate, geology, agriculture, mining and wastewater discharge
+
+Dissolved Reactive Phosphorus:
+물속에 녹아있는 인산염(Phosphate)의 수치를 측정한 것. 인산염은 식물과 동물의 생존에 꼭 필요한 필수 영양소이지만, 양이 너무 많아지면 수질 문제를 일으킴
+DRP 수치가 높으면 조류(Algal blooms)가 급격히 늘어나 물이 탁해지고 악취가 나며, 유해 독소가 발생할 수 있습니다. 조류가 죽고 썩는 과정에서 물속의 산소(DO)를 소모하여 물고기 등 수중 생물이 살기 힘든 환경이 됩니다.
+<100ug/L
+human activities such as agricultural runoff, sewage and industrial wastewater
